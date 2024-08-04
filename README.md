@@ -6,7 +6,7 @@
 
 <h2 align="center">Log Analytics Workspace & Microsoft Sentinel (SIEM) Setup + Geo IP Data Ingestion</h2>
 
-![Banner](https://github.com/user-attachments/assets/e1ae7814-502d-4b8b-91c1-faf36eadfa36)
+![Banner](https://github.com/user-attachments/assets/14bbdc57-80fa-4b24-9008-abffe27102ae)
 <br />
 <br />
 
