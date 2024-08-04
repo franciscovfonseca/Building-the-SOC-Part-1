@@ -6,8 +6,13 @@
 
 <h2 align="center">Log Analytics Workspace & Microsoft Sentinel (SIEM) Setup + Geo IP Data Ingestion</h2>
 
-![Banner](https://github.com/user-attachments/assets/14bbdc57-80fa-4b24-9008-abffe27102ae)
+<br>
+
+<p align="center">
+<img width="700" src="https://github.com/user-attachments/assets/b7cded74-c328-4778-a585-8befccdcc6c7" alt="Banner"/>
+
 <br />
+
 <br />
 
 
@@ -15,15 +20,25 @@
 <summary> <h2>1️⃣ Create Log Analytics Workspace</h2> </summary>
 <br>
 
+Create a New **Log Analytics Workspace**:
+
+<br>
+
 ![azure portal](https://github.com/user-attachments/assets/5a321762-df1d-4523-a4e2-393aa02d4a07)
 
 <br>
 
-Add Sentinel to the Workspace:
+Add **Microsoft Sentinel** to our ```LAW-Cyber-Lab``` **Log Analytics Workspace**:
 
 <br>
 
 ![azure portal](https://github.com/user-attachments/assets/e3bbd331-af14-4cfd-bfd2-e2f39396e82e)
+
+<br>
+
+✅ We can confirm that **Microsoft Sentinel** was successfully added to our LAW:
+
+<br>
 
 ![azure portal](https://github.com/user-attachments/assets/1d6a255b-1e7e-43ed-8a4d-ca20ccb58141)
 
@@ -39,7 +54,9 @@ Add Sentinel to the Workspace:
 
 In **Microsoft Sentinel** ➜ Create a new **Watchlist for Geo IP Data**.
 
-This Watchlist will help us correlate **Security Events** ➜ to **Geographic Locations** later in the lab.
+We'll name the Watchlist: ```geoip```
+
+Set the **"Alias"** as ```geoip``` as well.
 
 <br>
 
@@ -47,7 +64,13 @@ This Watchlist will help us correlate **Security Events** ➜ to **Geographic Lo
 
 <br>
 
-Upload the Geo IP data and set the Search Key.
+Under the **"Source"** tab:
+
+  - Upload the **Geo IP data CSV File**
+
+  - Set the **Search Key** to ```network```
+  
+  - Click **"Review + create"**
 
 <br>
 
@@ -55,7 +78,17 @@ Upload the Geo IP data and set the Search Key.
 
 <br>
 
-Once the watchlist begins uploading ➜ Sentinel will start Ingesting the Data.
+>   <details close> 
+>   
+> **<summary> 💡 </summary>**
+> 
+> This Watchlist will help us correlate **Security Events** to **Geographic Locations** later in the lab.
+> 
+>   </details>
+
+<br>
+
+Once the watchlist begins uploading ➜ Sentinel will start **Ingesting the Data**.
 
 The Data will be available for Querying ➜ even Before Ingestion Completes.
 
